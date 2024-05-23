@@ -1,8 +1,10 @@
 .env
 
 node_modules
+pnpm-lock.yaml
+
+
 
 meta.json
-
-
 build
+
