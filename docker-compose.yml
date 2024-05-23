@@ -1,0 +1,16 @@
+name: weigh
+services:
+  postgres:
+    image: bitnami/postgresql:latest
+    container_name: weigh
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=weigh
+    volumes:
+      - weigh_pg_data:/bitnami/postgresql
+
+volumes:
+  weigh_pg_data:

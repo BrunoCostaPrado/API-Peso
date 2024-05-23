@@ -1,0 +1,50 @@
+{
+	"name": "peso_api",
+	"version": "1.0.0",
+	"description": "",
+	"type": "module",
+	"main": "index.js",
+	"author": "Bruno Costa Prado",
+	"scripts": {
+		"dev": "tsx watch  --env-file .env src/main.ts",
+		"lint": "oxlint . && prettier --write .",
+		"db:push": "drizzle-kit push:pg",
+		"std": "drizzle-kit studio",
+		"mig": "drizzle-kit migrate",
+		"mig:gen": "drizzle-kit generate",
+		"mig:del": "drizzle-kit drop",
+		"type": "tsx del.mts && tsc && pnpm lint",
+		"del": "tsx del.mts",
+		"build": " tsx del.mts && tsx esbuild.mts && pnpm lint",
+		"test": "vitest --coverage"
+	},
+	"keywords": [],
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^20.12.11",
+		"@types/pg": "8.11.6",
+		"@types/ws": "^8.5.10",
+		"@vitest/coverage-v8": "^1.6.0",
+		"del": "^7.1.0",
+		"devalue": "^5.0.0",
+		"drizzle-kit": "^0.21.1",
+		"esbuild": "^0.21.1",
+		"eslint-plugin-drizzle": "^0.2.3",
+		"pg": "^8.11.5",
+		"ts-node": "^10.9.2",
+		"tslib": "^2.6.2",
+		"tsx": "^4.9.4",
+		"typescript": "^5.4.5",
+		"zod": "^3.23.8"
+	},
+	"dependencies": {
+		"@fastify/websocket": "^10.0.1",
+		"@paralleldrive/cuid2": "^2.2.2",
+		"drizzle-orm": "^0.30.10",
+		"fastify": "^4.27.0",
+		"postgres": "^3.4.4",
+		"vite": "^5.2.11",
+		"vitest": "^1.6.0"
+	},
+	"packageManager": "pnpm@9.1.0+sha256.22e36fba7f4880ecf749a5ca128b8435da085ecd49575e7fb9e64d6bf4fad394"
+}

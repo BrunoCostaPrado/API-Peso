@@ -1,0 +1,32 @@
+{
+	"compilerOptions": {
+		"target": "ES2022",
+		"module": "ES2022",
+		"moduleResolution": "Bundler",
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"plugins": [{ "transform": "transformer-module" }],
+		"resolveJsonModule": true,
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["src/*"],
+			"$lib/*": ["./src/lib/*"],
+			"$routes/*": ["src/routes/*"]
+			// "$test/*": ["src/test/*"]
+		},
+		"strict": true,
+		"strictNullChecks": true,
+		"allowJs": true,
+		"checkJs": true,
+		"noImplicitAny": false,
+		"outDir": "build",
+		"importHelpers": true,
+		"declarationDir": "types",
+		"emitDeclarationOnly": true,
+		"declaration": true,
+		"declarationMap": true,
+		"lib": ["DOM", "ES2023"]
+	},
+	"include": ["src/*", "src/types.d.ts"],
+	"exclude": ["node_modules", "build", "types", "del.mts"]
+}
