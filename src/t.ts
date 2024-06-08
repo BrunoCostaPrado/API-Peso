@@ -1,7 +1,7 @@
-import { weigh } from "$lib/types"
+import { weight } from "$lib/types"
 
-const a: weigh = {
-	weigh: 6.79,
+const a: weight = {
+	weight: 6.79,
 	date: "2024/05/22"
 }
 

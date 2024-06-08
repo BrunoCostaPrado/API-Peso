@@ -8,9 +8,9 @@
 	"scripts": {
 		"dev": "tsx watch  --env-file .env src/main.ts",
 		"lint": "oxlint . && prettier --write .",
-		"db:push": "drizzle-kit push:pg",
+		"db:push": "drizzle-kit push",
 		"std": "drizzle-kit studio",
-		"mig": "drizzle-kit migrate && drizzle-kit push",
+		"mig": "drizzle-kit generate && drizzle-kit push",
 		"mig:gen": "drizzle-kit generate",
 		"mig:del": "drizzle-kit drop",
 		"type": "tsx del.mts && tsc && pnpm lint",

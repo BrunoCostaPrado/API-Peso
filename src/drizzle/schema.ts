@@ -76,11 +76,11 @@ import { createId } from "@paralleldrive/cuid2"
 // 	}
 // )
 
-export const Weigh = pgTable("weigh", {
+export const Weight = pgTable("weight", {
 	id: text("id")
 		.$defaultFn(() => createId())
 		.primaryKey(),
 	date: text("date").notNull(),
-	weigh: doublePrecision("weigh").notNull(),
+	weight: doublePrecision("weight").notNull(),
 	createdAt: timestamp("createdAt").defaultNow().notNull()
 })
